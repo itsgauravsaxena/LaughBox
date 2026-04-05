@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		448FC3062F80C88A002BECD3 /* LaughBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3052F80C88A002BECD3 /* LaughBoxApp.swift */; };
-		448FC3082F80C88A002BECD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3072F80C88A002BECD3 /* ContentView.swift */; };
+		448FC3302F80C88A002BECD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3312F80C88A002BECD3 /* ContentView.swift */; };
+		448FC3322F80C88A002BECD3 /* JokesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3332F80C88A002BECD3 /* JokesData.swift */; };
+		448FC3342F80C88A002BECD3 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3352F80C88A002BECD3 /* JokeService.swift */; };
 		448FC30A2F80C89B002BECD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448FC3092F80C89B002BECD3 /* Assets.xcassets */; };
 		448FC30D2F80C89B002BECD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448FC30C2F80C89B002BECD3 /* Preview Assets.xcassets */; };
 		448FC3172F80C89D002BECD3 /* LaughBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448FC3162F80C89D002BECD3 /* LaughBoxTests.swift */; };
@@ -36,7 +38,9 @@
 /* Begin PBXFileReference section */
 		448FC3022F80C88A002BECD3 /* LaughBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaughBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448FC3052F80C88A002BECD3 /* LaughBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaughBoxApp.swift; sourceTree = "<group>"; };
-		448FC3072F80C88A002BECD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		448FC3312F80C88A002BECD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		448FC3332F80C88A002BECD3 /* JokesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesData.swift; sourceTree = "<group>"; };
+		448FC3352F80C88A002BECD3 /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		448FC3092F80C89B002BECD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448FC30C2F80C89B002BECD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		448FC3122F80C89D002BECD3 /* LaughBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaughBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				448FC3052F80C88A002BECD3 /* LaughBoxApp.swift */,
-				448FC3072F80C88A002BECD3 /* ContentView.swift */,
+				448FC3312F80C88A002BECD3 /* ContentView.swift */,
+				448FC3332F80C88A002BECD3 /* JokesData.swift */,
+				448FC3352F80C88A002BECD3 /* JokeService.swift */,
 				448FC3092F80C89B002BECD3 /* Assets.xcassets */,
 				448FC30B2F80C89B002BECD3 /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448FC3082F80C88A002BECD3 /* ContentView.swift in Sources */,
 				448FC3062F80C88A002BECD3 /* LaughBoxApp.swift in Sources */,
+				448FC3302F80C88A002BECD3 /* ContentView.swift in Sources */,
+				448FC3322F80C88A002BECD3 /* JokesData.swift in Sources */,
+				448FC3342F80C88A002BECD3 /* JokeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
