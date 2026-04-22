@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Replace this URL after pushing jokes.json to GitHub
 // Format: https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/jokes.json
-private let jokesURL = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/jokes.json"
+private let jokesURL = "https://raw.githubusercontent.com/itsgauravsaxena/LaughBox/main/jokes.json"
 
 // MARK: - JSON model
 
@@ -53,16 +53,27 @@ class JokeService: ObservableObject {
     }
 
     private func fetchAll() async -> [RemoteJoke]? {
-        guard let url = URL(string: jokesURL) else {
-            errorMessage = "Invalid jokes URL."
-            return nil
-        }
+        // Try remote first, fall back to bundled jokes.json
+        if let remote = await fetchRemote() { return remote }
+        return loadBundled()
+    }
+
+    private func fetchRemote() async -> [RemoteJoke]? {
+        guard let url = URL(string: jokesURL) else { return nil }
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             return try JSONDecoder().decode([RemoteJoke].self, from: data)
         } catch {
-            errorMessage = "Could not load jokes. Check your internet connection."
             return nil
         }
+    }
+
+    private func loadBundled() -> [RemoteJoke]? {
+        guard let url = Bundle.main.url(forResource: "jokes", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            errorMessage = "Could not load jokes."
+            return nil
+        }
+        return try? JSONDecoder().decode([RemoteJoke].self, from: data)
     }
 }
